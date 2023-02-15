@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "mp-toptips": "weui-miniprogram/toptips/toptips",
+    "mp-actionSheet": "weui-miniprogram/actionsheet/actionsheet"
+  },
+  "navigationBarTitleText": "聊天室"
+}

@@ -1,0 +1,635 @@
+page{
+  background-color: gray;
+  background: ghostwhite;
+}
+movable-area {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  pointer-events: none;
+}
+
+movable-view {
+  width: 100px;
+  height: 100px;
+  pointer-events: stroke;
+  left: 20px;
+  top: 20px;
+  border-radius: 100%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  background-color: #333333;
+  position: relative;
+  animation: fadeIn 0.3s;
+}
+
+movable-view .player_bg {
+  width: 100px;
+  height: 100px;
+}
+
+movable-view image {
+  border-radius: 100%;
+}
+
+movable-view view {
+  position: absolute;
+  left: 19px;
+  right: 19px;
+  top: 19px;
+  bottom: 19px;
+  border-radius: 100%;
+}
+
+movable-view image {
+  width: 100%;
+  height: 100%;
+}
+
+.bbbug_player {
+  height: 120px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  margin: 10px;
+  position: relative;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  background-color: #333;
+  animation: fadeIn 0.3s;
+}
+
+.bbbug_player_img {
+  position: absolute;
+  left: 28px;
+  top: 28px;
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+}
+
+.bbbug_player_tips {
+  text-align: center;
+  font-size: 14px;
+  color: #999;
+  padding-top: 50px;
+}
+
+.bbbug_player_outer {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+}
+
+.bbbug_player_bar {
+  position: absolute;
+  left: 50px;
+  top: 0px;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+}
+
+.bbbug_player_song {
+  position: absolute;
+  left: 120px;
+  top: 10px;
+  right: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.bbbug_player_user {
+  position: absolute;
+  right: 15px;
+  bottom: 10px;
+  font-size: 12px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.bbbug_player_singer {
+  position: absolute;
+  left: 120px;
+  top: 40px;
+  right: 20px;
+  font-size: 14px;
+  color: #ccc;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.bbbug_player_userhead {
+  margin-top: -25%;
+  filter: blur(20px);
+  width: 100%;
+  height: 100%;
+}
+
+.bbbug_upload {
+  background-color: #666;
+  color: white !important;
+  padding: 8px 16px !important;
+  font-size: 14px !important;
+  float: right;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 5px;
+  margin-right: 5px;
+  border-radius: 10px;
+}
+
+.bbbug_history {
+  background-color: #f5f5f5;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding-bottom: calc(env(safe-area-inset-bottom));
+  overflow-y: scroll;
+}
+
+.bbbug_history .bbbug_system {
+  margin: 10px 10%;
+  text-align: center;
+}
+
+.bbbug_history .bbbug_system view {
+  font-size: 12px;
+  color: #fff;
+  word-break: break-all;
+  word-wrap: break-word;
+  text-align: center;
+  background-color: #ccc;
+  padding: 2px 5px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.bbbug_history .bbbug_item {
+  padding: 10px;
+}
+
+.bbbug_history .bbbug_item .bbbug_head image {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  position: absolute;
+  left: 10px;
+}
+
+.bbbug_history .bbbug_mine .bbbug_head image {
+  left: auto;
+  right: 10px;
+}
+
+.bbbug_history .bbbug_quot {
+  font-size: 12px;
+  color: #999;
+  background-color: #eeeeee;
+  max-width: 200px;
+  display: inline-block;
+  margin-top: 5px;
+  border-radius: 5px;
+  padding: 2px 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bbbug_history .bbbug_item .bbbug_user {
+  margin-left: 60px;
+  margin-right: 60px;
+  font-size: 14px;
+  color: #999;
+  text-align: left;
+}
+
+.bbbug_history .bbbug_mine .bbbug_user {
+  text-align: right;
+}
+
+.bbbug_panel {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(20px) !important;
+  padding: 10px 5px;
+  padding-bottom: calc(env(safe-area-inset-bottom) + 10px);
+  text-align: center;
+  display: flex;
+  align-content: flex-start;
+  flex-flow: row wrap;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+@keyframes slideIn {
+  0% {
+    -webkit-transform: translate3d(0, 200%, 0);
+    transform: translate3d(0, 200%, 0);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: translate3d(0, 200%, 0);
+    transform: translate3d(0, 200%, 0);
+    opacity: 0;
+  }
+}
+
+.animationSlideIn {
+  animation: slideIn 0.1s;
+  animation-fill-mode: forwards;
+}
+
+.animationSlideOut {
+  animation: slideOut 0.3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.bbbug_panel_item {
+  display: inline-block;
+  flex: 0 0 25%;
+  margin: 5px 0px;
+}
+
+.bbbug_panel_icon .iconfont {
+  font-size: 32px;
+  color: #666;
+}
+
+.bbbug_panel_title {
+  font-size: 12px;
+  color: #666;
+  margin-top: -10px;
+}
+
+.bbbug_input {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0px 40px;
+  padding-bottom: calc(env(safe-area-inset-bottom));
+  background-color: white;
+}
+
+.bbbug_input input {
+  padding: 15px;
+}
+
+.bbbug_input .placeholder {
+  padding: 15px;
+  color: #999;
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  top: 0;
+  bottom: 0;
+}
+
+.bbbug_at {
+  position: fixed;
+  left: 5px;
+  bottom: 55px;
+  padding-bottom: calc(env(safe-area-inset-bottom));
+}
+
+
+.bbbug_at_user {
+  background-color: #666;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.bbbug_at_user view {
+  max-width: 200px;
+  display: inline-block;
+  margin-right: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.bbbug_at_user i {
+  font-size: 12px;
+  vertical-align: middle;
+}
+
+.bbbug_face {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 8px;
+}
+
+.bbbug_face image {
+  vertical-align: middle;
+  width: 36px;
+  height: 36px;
+}
+
+.bbbug_time {
+  font-size: 12px;
+  color: #ccc;
+  margin-top: 5px;
+  height: 12px;
+  line-height: 12px;
+  vertical-align: middle;
+}
+
+.bbbug_time .icon-loading {
+  animation: turnX 10s linear infinite;
+  display: inline-block;
+}
+
+@keyframes turnX {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+
+}
+
+.bbbug_more {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 8px;
+}
+
+.bbbug_more image {
+  vertical-align: middle;
+  width: 38px;
+  height: 38px;
+}
+
+.bbbug_cover {
+  background-color: #fff;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 55px;
+  color: #999;
+  z-index: 10;
+  text-align: center;
+  padding: 0px 10px;
+  padding-bottom: calc(env(safe-area-inset-bottom));
+  line-height: 50px;
+}
+
+.bbbug_history .bbbug_item .bbbug_content {
+  margin-left: 60px;
+  margin-top: 5px;
+  margin-right: 60px;
+  text-align: left;
+}
+
+.bbbug_history .bbbug_mine .bbbug_content {
+  text-align: right;
+}
+
+.bbbug_user_role {
+  background-color: orangered;
+  color: white;
+  padding: 0px 2px;
+  font-size: 12px;
+  border-radius: 3px;
+  display: inline;
+}
+
+.bbbug_history .bbbug_item .bbbug_content .bbbug_text {
+  background-color: white;
+  border-radius: 10px;
+  padding: 8px 10px;
+  display: inline-block;
+  max-width: 80%;
+  word-break: break-all;
+  word-wrap: break-word;
+  font-size: 16px;
+  color: #333;
+  text-align: left;
+}
+
+.bbbug_history .bbbug_item .bbbug_content .bbbug_link {
+  background-color: white;
+  border-radius: 10px;
+  padding: 8px 10px;
+  display: inline-block;
+  max-width: 90%;
+  word-break: break-all;
+  word-wrap: break-word;
+  font-size: 16px;
+  color: #333;
+  text-align: left;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bbbug_history .bbbug_item .bbbug_content .bbbug_link .bbbug_link_title {
+  font-size: 16px;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bbbug_history .bbbug_item .bbbug_content .bbbug_link .bbbug_link_desc {
+  font-size: 12px;
+  color: #999999;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+}
+
+.bbbug_history .bbbug_item .bbbug_content .bbbug_link .bbbug_link_url {
+  font-size: 12px;
+  background-color: #666;
+  color: #fff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: -10px;
+  margin-top: 20px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 0px 10px;
+}
+
+.bbbug_history .bbbug_mine .bbbug_content .bbbug_text {
+  background-color: #cccccc;
+  color: #333333;
+}
+
+.bbbug_history .bbbug_item .bbbug_content .bbbug_image {
+  background-color: white;
+  border-radius: 10px;
+  padding: 2px;
+  display: inline-block;
+  max-width: 80%;
+  word-break: break-all;
+  word-wrap: break-word;
+  font-size: 14px;
+  color: #333;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.bbbug_history .bbbug_item .bbbug_content .bbbug_image image {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+}
+
+.bbbug_scroll_button {
+  position: fixed;
+  right: 10px;
+  bottom: 100px;
+  padding-bottom: calc(env(safe-area-inset-bottom));
+  padding: 8px 16px;
+  font-size: 14px;
+  color: white;
+  background-color: #666666;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.bbbug_emoji {
+  position: fixed;
+  left: 10px;
+  right: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 10px;
+  bottom: calc(env(safe-area-inset-bottom) + 60px);
+}
+
+.bbbug_emoji view {
+  font-size: 14px;
+  color: #999;
+  padding: 20px 0px;
+  text-align: center;
+}
+
+.bbbug_emoji image {
+  width: 9%;
+  margin: 1%;
+}
+
+.weui-cell {
+  padding: 15px;
+}
+
+
+.weui-label {
+  width: 60px;
+}
+
+.passwordForm {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #f5f5f5;
+}
+
+.passwordForm .tips {
+  margin-top: 50px;
+  color: #666;
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 20px;
+}
+
+.footer {
+  text-align: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 30px;
+  font-size: 16px;
+  padding-bottom: env(safe-area-inset-bottom);
+  color: #666;
+}
+
+.bbbug_username .verify {
+  color: rgb(9, 122, 216);
+  margin: 0px 3px;
+  vertical-align: middle;
+}
+
+.footer view {
+  display: inline-block;
+  margin: 0px 5px;
+  vertical-align: middle;
+}
+
+.logout {
+  color: orangered;
+}
+
+.logout i {
+  font-size: 16px;
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+.bbbug_history .bbbug_item .bbbug_content .bbbug_at_me {
+  background-color: #666;
+  color: white;
+}

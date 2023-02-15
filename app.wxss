@@ -1,0 +1,187 @@
+@import '/colorui/main.wxss';
+@import '/colorui/icon.wxss';
+
+page {
+  background-color: #f5f5f5;
+  font-size: 16px;
+  /* font-family: 'Roboto'; */
+  padding-bottom: calc(env(safe-area-inset-bottom)/2);
+}
+
+.weui-media-box__title {
+  display: block;
+}
+
+.weui-btn-area {
+  margin: 20px 10px;
+}
+
+.weui-media-box:before {
+  border-top: 1px solid #f5f5f5;
+}
+
+.weui-cell:before {
+  border-top: 1px solid #f5f5f5;
+}
+
+.page {
+  padding-bottom: 10px;
+}
+
+.weui-cell_switch {
+  padding: 10px 15px !important;
+}
+
+.weui-media-box__title {
+  font-size: 18px;
+}
+
+.weui-title {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.app_title {
+  font-size: 24px;
+  color: #333;
+  font-weight: 600;
+  margin-top: 10px;
+  text-align: center;
+  text-shadow: 1px 1px 1px white;
+}
+
+.app_desc {
+  font-size: 14px;
+  color: #999;
+  margin: 5px 30px;
+  text-align: center;
+  word-break: break-word;
+}
+
+.weui-footer {
+  bottom: 20px;
+}
+
+.weui-flex__item {
+  text-align: center;
+  padding: 10px 0px;
+  font-size: 16px;
+}
+
+.weui-flex {
+  background-color: white;
+  margin: 10px;
+  color: #333;
+  border-radius: 10px;
+}
+
+.searchbox {
+  overflow: hidden;
+}
+
+
+@media (prefers-color-scheme: dark) {
+
+  page,
+  .bbbug_history {
+    background-color: #222 !important;
+  }
+
+  .bbbug_login_sendmail,
+  .bbbug_input,
+  .bbbug_panel_icon .iconfont,
+  .bbbug_panel_title {
+    color: #ccc !important;
+  }
+
+  .bbbug_history .bbbug_item .bbbug_head image {
+    border: 1px solid #111111 !important;
+  }
+
+  .bbbug_cover {
+    background-color: #333 !important;
+    color: #fff !important;
+  }
+
+  .bbbug_input {
+    border-top: 1px solid #252525 !important;
+    background-color: #222 !important;
+  }
+
+  .bbbug_history .bbbug_item .bbbug_content .bbbug_text {
+    background-color: #333 !important;
+    color: #ccc !important;
+  }
+
+  .searchbox,
+  .weui-panel,
+  .weui-cells,
+  .roomBg,
+  .bbbug_history .bbbug_item .bbbug_content .bbbug_image,
+  .bbbug_history .bbbug_quot {
+    background-color: #333 !important;
+  }
+
+  .bbbug_history .bbbug_item .bbbug_content .bbbug_at_me {
+    background-color: #fff !important;
+    color: #666 !important;
+  }
+
+  .bbbug_history .bbbug_system view {
+    background-color: #333 !important;
+    color: #666 !important;
+  }
+
+  .roomUser {
+    color: #ccc !important;
+  }
+
+  .roomId {
+    background-color: #222 !important;
+    color: #999 !important;
+  }
+
+  .app_title {
+    color: #fff !important;
+    text-shadow: 1px 1px 1px #111 !important;
+  }
+
+  .roomBg {
+    color: #ccc !important;
+  }
+
+  .bbbug_time {
+    color: #666 !important;
+  }
+
+  .weui-media-box__title {
+    color: #ccc !important;
+  }
+
+  .weui-media-box__desc {
+    color: #999 !important;
+  }
+
+  .weui-cell:before,
+  .weui-media-box::before {
+    border-top: 1px solid #444 !important;
+  }
+
+  .passwordForm {
+    background-color: #222 !important;
+    z-index: 21 !important;
+  }
+
+  movable-view {
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5) !important;
+  }
+
+  .user_profile .user_vip {
+    background-color: #333;
+  }
+
+  .user_profile .user_vip_title {
+    color: #fff;
+  }
+}

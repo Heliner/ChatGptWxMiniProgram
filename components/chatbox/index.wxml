@@ -1,0 +1,23 @@
+<scroll-view class="cu-chat" scroll-y="true" enable-back-to-top enable-flex scroll-into-view="{{scrollId}}"
+  style="height:{{systemInfo.windowHeight - 50}}px;" bindscrolltoupper="tapTop">
+  <view wx:for="{{chatList}}" wx:key="index" wx:for-item="item">
+    <!--robot发送的信息-->
+    <view class="cu-item" wx:if="{{item.type != 'man'}}" id="msg-{{index}}">
+      <view class="cu-avatar radius" style="background-image:url({{item.avatarUrl}});"></view>
+      <view class="main">
+        <view class="content bg-cyan shadow">
+          <text>{{item.content}}</text>
+        </view>
+      </view>
+    </view>
+    <!--自己发送的信息-->
+    <view class="cu-item self" wx:if="{{item.type == 'man' }}" id="msg-{{index}}">
+      <view class="main">
+        <view class="content bg-green shadow">
+          <text>{{item.content}}</text>
+        </view>
+      </view>
+      <view class="cu-avatar radius" style="background-image:url({{item.avatarUrl}});"></view>
+    </view>
+  </view>
+</scroll-view>

@@ -1,0 +1,25 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "requiredBackgroundModes": ["audio"],
+  "useExtendedLib": {
+    "weui":true
+  },
+  "usingComponents": {
+    "chat-box":"components/chatbox/index",
+    "mp-actionSheet": "weui-miniprogram/actionsheet/actionsheet"
+  },
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "Cloud聊天室",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "networkTimeout": {
+    "request": 60000,
+    "downloadFile": 60000
+  }
+}
