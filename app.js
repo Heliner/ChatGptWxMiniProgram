@@ -12,12 +12,6 @@ App({
       env: config.CloudID,
       traceUser: true
     })
-    Cloud.GetOpenData().then(res => {
-      console.log(res)
-      that.globalData.openid = res.result.openid;
-      //异步配置缓存
-      wx.setStorageSync('openid', res.result.openid);
-    })
   },
   InitCustom() {
     wx.getSystemInfo({
