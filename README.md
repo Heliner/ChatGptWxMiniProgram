@@ -15,5 +15,7 @@ ChatGpt聊天室微信小程序，一键部署到微信小程序，即可支持g
 # 关联项目
 后台项目：https://github.com/Heliner/ChatGptWxBackend
 
+# Feature
+1. 使用webSocket进行通信
 #  
 欢迎大家踊跃star，提交commit
