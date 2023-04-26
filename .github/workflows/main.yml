@@ -5,6 +5,11 @@ on:
     - cron: "* */12 * * *"
   workflow_dispatch:
 
+permissions:
+  pull-requests: write
+  issues: write
+  repository-projects: write
+  
 jobs:
   build:
     name: Jobs to update datas
