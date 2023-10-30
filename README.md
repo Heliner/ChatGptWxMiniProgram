@@ -19,3 +19,21 @@ ChatGpt聊天室微信小程序，一键部署到微信小程序，即可支持g
 1. 使用webSocket进行通信
 #  
 欢迎大家踊跃star，提交commit
+<picture>
+  <source
+    media="(prefers-color-scheme: dark)"
+    srcset="
+      https://api.star-history.com/svg?repos=Heliner/ChatGptWxMiniProgram&type=Date&theme=dark
+    "
+  />
+  <source
+    media="(prefers-color-scheme: light)"
+    srcset="
+      https://api.star-history.com/svg?repos=Heliner/ChatGptWxMiniProgram&type=Date
+    "
+  />
+  <img
+    alt="Star History Chart"
+    src="https://api.star-history.com/svg?repos=star-history/star-history&type=Date"
+  />
+</picture>
