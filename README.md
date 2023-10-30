@@ -34,6 +34,6 @@ ChatGpt聊天室微信小程序，一键部署到微信小程序，即可支持g
   />
   <img
     alt="Star History Chart"
-    src="https://api.star-history.com/svg?repos=star-history/star-history&type=Date"
+    src="https://api.star-history.com/svg?repos=Heliner/ChatGptWxMiniProgram&type=Date"
   />
 </picture>
