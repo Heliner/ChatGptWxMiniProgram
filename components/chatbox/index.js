@@ -98,12 +98,12 @@ app.globalData.cht = that
         chatList: [
           {
             "type":"man",
-            "avatarUrl":"",   
+            "avatarUrl":"image/openai-avatar.png",   
             "content":"你好 chatGpt",
           },
           {
             "type":"robot",
-            "avatarUrl":"../../pages/image/openai-avatar.png",
+            "avatarUrl":"image/openai-avatar.png",
             "content":"我是 chatGpt",
           }
         ]
