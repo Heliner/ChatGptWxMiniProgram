@@ -70,7 +70,7 @@ Page({
         console.log(cht.data.chatList.push({
           "type": "rob",
           "content": robContent,
-          "avatarUrl":"../../pages/image/openai-avatar.png",
+          "avatarUrl":"image/openai-avatar.png",
         }))
         cht.setData({
           chatList: cht.data.chatList
