@@ -4,7 +4,8 @@ ChatGpt微信小程序前端程序
 ChatGpt聊天室微信小程序，一键部署到微信小程序，即可支持gpt微信聊天机器人。
 
 # 效果图
-![preview](https://github.com/Heliner/ChatGptWxMiniProgram/doc/images/preview.gif)
+![preview](https://github.com/Heliner/ChatGptWxMiniProgram/assets/32272517/e235a4dc-9600-4872-b34e-9f4c239be3e2)
+
 
 # Demo
 体验小程序
