@@ -11,12 +11,7 @@ Page({
     //输入框距离
     InputBottom: 0,
     roomId: 1,
-    userInfo: {},
     content: '',
-    groups: [{
-      text: '点歌',
-      value: 1
-    },]
   },
   InputFocus(e) {
     this.setData({
@@ -38,6 +33,7 @@ Page({
     const content = that.data.content
     console.log(cht.data.chatList.push({
       "type": "man",
+      "avatarUrl":"image/user.jpeg", 
       "content": that.data.content,
     }))
 
@@ -56,8 +52,6 @@ Page({
       },
       "path": "/chat_itf/",
       "header": {
-        //'content-type': 'multipart/form-data',
-        // "Content-type": "multipart/form-data",
         "X-WX-SERVICE": "django-q86u"
       },
       "method": "POST",
@@ -75,7 +69,19 @@ Page({
         cht.setData({
           chatList: cht.data.chatList
         })
-      }
+      },
+      // for offline test
+      // fail( err){
+        // console.log("fail")
+        // console.log(cht.data.chatList.push({
+          // "type": "rob",
+          // "content":"rand x",
+          // "avatarUrl":"image/openai-avatar.png",
+        // }))
+        // cht.setData({
+        // chatList: cht.data.chatList
+        // })
+        // }
     })
 
 

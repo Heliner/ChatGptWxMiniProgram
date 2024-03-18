@@ -18,9 +18,7 @@ const cx = Component({
       type: Number,
       observer: function (newVal, oldVal) {
         if (newVal != undefined && newVal != null) {
-          // console.log(newVal)
         }
-
       }
     }
   },
@@ -29,15 +27,13 @@ const cx = Component({
    */
   pageLifetimes: {
     show: function () {
-      // 页面被展示
+
     },
   },
   lifetimes: {
     attached() {
       var that = this;
       that.initMessageHistory();
-      //初始化监听器
-      // that.initWatcher();
       wx.getSystemInfo({
         success: function (res) {
           that.setData({
@@ -98,13 +94,13 @@ app.globalData.cht = that
         chatList: [
           {
             "type":"man",
-            "avatarUrl":"image/openai-avatar.png",   
-            "content":"你好 chatGpt",
+            "avatarUrl":"image/user.jpeg",   
+            "content":"你好，ChatGpt",
           },
           {
             "type":"robot",
             "avatarUrl":"image/openai-avatar.png",
-            "content":"我是 chatGpt",
+            "content":"你好！有什么问题我可以帮忙解答吗？欢迎随时向我提问。",
           }
         ]
       })
