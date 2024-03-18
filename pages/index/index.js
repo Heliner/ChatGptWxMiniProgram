@@ -7,7 +7,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    login: false,
     //输入框距离
     InputBottom: 0,
     roomId: 1,
@@ -25,10 +24,6 @@ Page({
   },
   async submit() {
     var that = this;
-    //已登录用户
-    wx.showLoading({
-      title: '信息发送',
-    })
     const cht = app.globalData.cht
     const content = that.data.content
     console.log(cht.data.chatList.push({
@@ -67,7 +62,8 @@ Page({
           "avatarUrl":"image/openai-avatar.png",
         }))
         cht.setData({
-          chatList: cht.data.chatList
+          chatList: cht.data.chatList,
+          scrollId : `msg-${cht.data.chatList.length - 1}`,
         })
       },
       // for offline test
@@ -80,6 +76,7 @@ Page({
         // }))
         // cht.setData({
         // chatList: cht.data.chatList
+        // scrollId : `msg-${cht.data.chatList.length - 1}`,
         // })
         // }
     })
